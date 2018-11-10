@@ -1,10 +1,80 @@
 /**index.wxss**/
-.userinfo {
+page{
+  height: 100%;
+  background-color: #F2F4F7;
+}
+.name{
+  position: absolute;
+  top: 128rpx;
+}
+.title-img{
+  height: 45.34rpx;
+  width: 224.38rpx;
+}
+.avatar{
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  overflow: hidden;
+}
+.userinfo-avatar{
+  width: 100%;
+  height: 100%;
+}
+.mail{
+  position: absolute;
+  border-radius: 16rpx;
+  top: 480rpx;
+  width: 670rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+  left: 40rpx;
+  right: 40rpx;
+  height: 128rpx;
+  background-color: #ffff;
+}
+.back{
+  position: absolute;
+  top: 856rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.back-img{
+  width: 100%;
+  height: 100%;
+}
+.checkcode{
+  position: absolute;
+  border-radius: 16rpx;
+  top: 648rpx;
+  width: 670rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+  left: 40rpx;
+  right: 40rpx;
+  height: 128rpx;
+  background-color: #ffff;
+}
+.mail::placeholder{
+  color: #C1C4CA;
+}
+/* .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-
+.mail{
+  width: 670rpx;
+  height: 128rpx;
+  background-color: #fff;
+}
+.mail{
+  width: 670rpx;
+  height: 128rpx;
+  margin: 0 auto;
+}
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
@@ -18,4 +88,4 @@
 
 .usermotto {
   margin-top: 200px;
-}
+} */

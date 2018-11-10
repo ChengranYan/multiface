@@ -1,0 +1,39 @@
+/* pages/nickname/nickname.wxss */
+page{
+  height: 100%;
+  background-color:#191F5D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  font-size: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 112rpx;
+}
+.desc{
+  color:#fff;
+  opacity: 0.4;
+  font-size: 32rpx;
+  text-align: center;
+  padding-top: 32rpx;
+}
+.avatar{
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 80rpx;
+}
+.nickname{
+  height: 128rpx;
+  width: 670rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin-top: 80rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box
+}

@@ -1,0 +1,10 @@
+<!--pages/nickname/nickname.wxml-->
+<text class='title'>
+  请为你的匿名身份设置昵称
+</text>
+<text class='desc'>
+  昵称达到一定等级时才能再次修改哦
+</text>
+<image  class="avatar" src="../../images/avatar.png" mode="cover"></image>
+
+<input class='nickname' value='你好'/>

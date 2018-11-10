@@ -16,7 +16,29 @@ Page({
     })
   },
   onLoad: function () {
+    wx.login({
+      success(res) {
+        if (res.code) {
+          console.log('login', res)
+          //发起网络请求
+          wx.request({
+            url: 'https://api.aiou.xyz/test/register',
+            data: {
+              code: res.code,
+              mail: 'chengran@guanghe.tv'
+            },
+            method: 'POST',
+            success(res) {
+              console.log('注册接口',res.data)
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
     if (app.globalData.userInfo) {
+      console.log(app.globalData.userInfo)
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true

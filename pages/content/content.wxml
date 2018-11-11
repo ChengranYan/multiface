@@ -1,23 +1,41 @@
 <!--pages/content/content.wxml-->
-<view class='changemode'></view>
+<view class='changemode'>
+  <view class='changemode-icon-con'>
+    <image class='changemode-icon' src='../../images/avatar1.png'></image>
+  </view>
+  <text class='changemode-text'>向右滑动切换为匿名模式</text>
+  <view class='changemode-icon-con'>
+    <image class='changemode-icon' src='../../images/avatar1.png'></image>
+  </view>
+</view>
 <scroll-view scroll-y class='content'>
-    <view class='article'>
-      <view class='article-info'>
-        <view class='left'>
-          <image class='avatar1' src='../../images/avatar1.png'></image>
-        </view>
-        <view class='right'>
-          <view class='info-name'>奥德赛小飞侠</view>
-          <view class='info-time'>3分钟前</view>
-        </view>
+  <view wx:for='{{[1,1,1,1,1,1]}}' class='article-container'>
+    <view class='article-info'>
+      <view class='article-info-left'>
+        <image class='avatar-info-img' src='../../images/avatar1.png'></image>
       </view>
-      <view class='article-content'>
-        <text>又要团建啦真开心～是应该把产品经理推进游泳池呢还是煮进火锅呢？</text>
+      <view class='article-info-right'>
+        <view class='info-name'>奥德赛小飞侠</view>
+        <view class='info-time'>3分钟前</view>
       </view>
     </view>
-    <view class='article'>hello world</view>
-    <view class='article'>hello world</view>
-    <view class='article'>hello world</view>
-    <view class='article'>hello world</view>
-    <view class='article'>hello world</view>
+    <view class='article-content'>
+      <text class='article-text'>又要团建啦真开心～是应该把产品经理推进游泳池呢还是煮进火锅呢？</text>
+      <view class='article-img-con' hidden="{{index === 1 || index === 3}}">
+        <image class='article-img' src='../../images/avatar1.png'></image>
+        <image class='article-img' src='../../images/avatar1.png'></image>
+        <image class='article-img' src='../../images/avatar1.png'></image>
+        <image class='article-img' src='../../images/avatar1.png'></image>
+        <image class='article-img' src='../../images/avatar1.png'></image>
+      </view>
+    </view>
+    <view class='article-btn-container'>
+      <image class='article-btn-icon' src='../../images/button.png'></image>
+      <text class='article-btn-text'>999+评论</text>
+      <image class='article-btn-icon' src='../../images/button.png'></image>
+    </view>
+  </view>
 </scroll-view>
+<view class='left-bottom-button'>
+  <image class='left-bottom-button-icon' src='../../images/button.png'></image>
+</view>

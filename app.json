@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/content/content",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/nickname/nickname",
-    "pages/content/content"
+    "pages/nickname/nickname"
   ],
   "window": {
     "backgroundTextStyle": "light",

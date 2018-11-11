@@ -9,7 +9,7 @@ Page({
   },
   SwitchingAnonymousModeMove: function (e) {
     const clientX = e.changedTouches[0].clientX;
-    if (clientX <= 360) {
+    if (clientX <= 360 && this.data.modeType) {
       this.setData({
         modeLeft: clientX + 96,
        })
@@ -22,7 +22,7 @@ Page({
   },
   SwitchingRealNameModeMove: function (e) {
     const clientX = e.changedTouches[0].clientX;
-    if (clientX >= 20) {
+    if (clientX >= 20 && !this.data.modeType) {
       this.setData({
         modeRight: this.data.windowWidth - clientX + 96,
       })

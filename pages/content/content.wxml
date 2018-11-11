@@ -1,26 +1,40 @@
 <!--pages/content/content.wxml-->
+<view class='container-page' style="background:{{modeType ? '#f5f5f5':'#191F5D'}}">
 <view class='changemode'>
-  <view class='changemode-icon-con'>
-    <image class='changemode-icon' src='../../images/avatar1.png'></image>
+  <view
+    class='changemode-icon-con changemode-icon-left '
+    catch:touchmove='SwitchingAnonymousModeMove'
+    style='left:{{modeLeft}}rpx'
+  >
+    <image class='changemode-icon' src="{{modeType ? '../../images/avatar.png':'../../images/avatar1.png'}}"></image>
   </view>
-  <text class='changemode-text'>向右滑动切换为匿名模式</text>
-  <view class='changemode-icon-con'>
-    <image class='changemode-icon' src='../../images/avatar1.png'></image>
+  <text class='changemode-text'>{{modeType ? '向右滑动切换为匿名模式':'向左滑动切换为实名模式'}}</text>
+  <view
+    class='changemode-icon-con changemode-icon-right'
+    catch:touchmove='SwitchingRealNameModeMove'
+    style='right:{{modeRight}}rpx'
+  >
+    <image class='changemode-icon' src="{{modeType ? '../../images/avatar1.png':'../../images/avatar.png'}}"></image>
   </view>
 </view>
 <scroll-view scroll-y class='content'>
-  <view wx:for='{{[1,1,1,1,1,1]}}' class='article-container'>
+  <view
+    wx:for='{{data}}'
+    wx:key='{{index}}'
+    class='article-container'
+    style="background:{{modeType ? '#fff':'#2F3676'}}"
+  >
     <view class='article-info'>
       <view class='article-info-left'>
         <image class='avatar-info-img' src='../../images/avatar1.png'></image>
       </view>
       <view class='article-info-right'>
-        <view class='info-name'>奥德赛小飞侠</view>
+        <view class='info-name' style="color:{{modeType ? '#72747D':'#fff'}}">奥德赛小飞侠</view>
         <view class='info-time'>3分钟前</view>
       </view>
     </view>
     <view class='article-content'>
-      <text class='article-text'>又要团建啦真开心～是应该把产品经理推进游泳池呢还是煮进火锅呢？</text>
+      <text class='article-text' style="color:{{modeType ? '#3B3A42':'#fff'}}">又要团建啦真开心～是应该把产品经理推进游泳池呢还是煮进火锅呢？是应该把产品经理推进游泳池呢还是煮进火锅呢是应该把产品经理推进游泳池呢还是煮进火锅呢是应该把产品经理推进游泳池呢还是煮进火锅呢是应该把产品经理推进游泳池呢还是煮进火锅呢</text>
       <view class='article-img-con' hidden="{{index === 1 || index === 3}}">
         <image class='article-img' src='../../images/avatar1.png'></image>
         <image class='article-img' src='../../images/avatar1.png'></image>
@@ -31,11 +45,12 @@
     </view>
     <view class='article-btn-container'>
       <image class='article-btn-icon' src='../../images/button.png'></image>
-      <text class='article-btn-text'>999+评论</text>
+      <text class='article-btn-text' style="color:{{modeType ? '#72747D':'#fff'}}">999+评论</text>
       <image class='article-btn-icon' src='../../images/button.png'></image>
     </view>
   </view>
 </scroll-view>
-<view class='left-bottom-button'>
+<view class='left-bottom-button' style="background:{{modeType ? '#4D50FA':'#6A8DFE'}}">
   <image class='left-bottom-button-icon' src='../../images/button.png'></image>
+</view>
 </view>

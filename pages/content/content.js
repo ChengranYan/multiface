@@ -1,18 +1,43 @@
 // pages/content/content.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    modeLeft: 10,
+    modeRight: 10,
+    modeType: true, //此时为实名模式
+    data: [1, 2, 3, 4, 5, 6],
+    windowWidth: wx.getSystemInfoSync().windowWidth
+  },
+  SwitchingAnonymousModeMove: function (e) {
+    const clientX = e.changedTouches[0].clientX;
+    if (clientX <= 360) {
+      this.setData({
+        modeLeft: clientX + 96,
+       })
+    } else {
+      this.setData({
+        modeType: false,
+        modeLeft: 10,
+      })
+    }
+  },
+  SwitchingRealNameModeMove: function (e) {
+    const clientX = e.changedTouches[0].clientX;
+    if (clientX >= 20) {
+      this.setData({
+        modeRight: this.data.windowWidth - clientX + 96,
+      })
+    } else {
+      this.setData({
+        modeType: true,
+        modeRight: 10
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

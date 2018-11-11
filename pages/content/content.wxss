@@ -6,6 +6,10 @@ page{
   flex-direction: column;
   background-color: #f5f5f5;
 }
+.container-page{
+  width: 100%;
+  height: 100%;
+}
 /* 滑块 */
 .changemode{
   width: 670rpx;
@@ -14,8 +18,9 @@ page{
   justify-content: space-between;
   align-items: center;
   padding: 0 10rpx;
-  margin-top: 40rpx;
+  margin:40rpx auto;
   border-radius: 72rpx;
+  position: relative;
   background:linear-gradient(to left, #4D50FA 0%,#6A8DFE 100%);
 }
 .changemode-icon-con{
@@ -23,6 +28,14 @@ page{
   height: 96rpx;
   border-radius: 48px;
   border: 8rpx solid #fff;
+}
+.changemode-icon-left{
+  position: absolute;
+  left: 10rpx;
+}
+.changemode-icon-right{
+  position: absolute;
+  right: 10rpx;
 }
 .changemode-icon{
   width: 100%;
@@ -35,21 +48,18 @@ page{
   text-align: center;
 }
 .content{
-  margin: 0 auto;
   position: absolute;
-  top: 220rpx;
+  top: 218rpx;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 670rpx;
 }
 /* 用户信息部分 */
 .article-container{
-  width: 100%;
   padding: 40rpx;
   border-radius: 16rpx;
   box-sizing: border-box;
-  margin-bottom: 40rpx;
+  margin:0 40rpx 40rpx;
   background-color: #fff;
 }
 .article-info{
@@ -82,7 +92,7 @@ page{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color:rgba(114, 116, 125, 1)
+  color:#72747D;
 }
 /* 文章内容 */
 .article-content {

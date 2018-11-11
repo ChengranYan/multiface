@@ -20,6 +20,13 @@ Page({
       })
     }
   },
+  SwitchingAnonymousModeEnd: function () {
+    if (this.data.modeType) {
+      this.setData({
+        modeLeft: 10
+      })
+    }
+  },
   SwitchingRealNameModeMove: function (e) {
     const clientX = e.changedTouches[0].clientX;
     if (clientX >= 20 && !this.data.modeType) {
@@ -29,6 +36,13 @@ Page({
     } else {
       this.setData({
         modeType: true,
+        modeRight: 10
+      })
+    }
+  },
+  SwitchingRealNameModeEnd: function () {
+    if (!this.data.modeType) {
+      this.setData({
         modeRight: 10
       })
     }

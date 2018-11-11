@@ -4,6 +4,7 @@
   <view
     class='changemode-icon-con changemode-icon-left '
     catch:touchmove='SwitchingAnonymousModeMove'
+    catch:touchend='SwitchingAnonymousModeEnd'
     style='left:{{modeLeft}}rpx'
   >
     <image class='changemode-icon' src="{{modeType ? '../../images/avatar.png':'../../images/avatar1.png'}}"></image>
@@ -12,6 +13,7 @@
   <view
     class='changemode-icon-con changemode-icon-right'
     catch:touchmove='SwitchingRealNameModeMove'
+    catch:touchend='SwitchingRealNameModeEnd'
     style='right:{{modeRight}}rpx'
   >
     <image class='changemode-icon' src="{{modeType ? '../../images/avatar1.png':'../../images/avatar.png'}}"></image>

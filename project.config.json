@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
-	"appid": "wxb537c8af841838c5",
+	"appid": "wxbc98d95347d4bfcb",
 	"projectname": "multiface",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -36,12 +36,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "fs",
-					"pathName": "pages/logs/logs",
+					"pathName": "pages/index/index",
 					"query": ""
 				},
 				{

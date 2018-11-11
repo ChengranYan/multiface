@@ -8,7 +8,7 @@ Page({
     windowWidth: wx.getSystemInfoSync().windowWidth
   },
   SwitchingAnonymousModeMove: function (e) {
-    const clientX = e.changedTouches[0].clientX;
+    const { clientX } = e.changedTouches[0];
     if (clientX <= 360 && this.data.modeType) {
       this.setData({
         modeLeft: clientX + 96,
@@ -28,10 +28,11 @@ Page({
     }
   },
   SwitchingRealNameModeMove: function (e) {
-    const clientX = e.changedTouches[0].clientX;
-    if (clientX >= 20 && !this.data.modeType) {
+    const {clientX} = e.changedTouches[0];
+    const {modeType, windowWidth} = this.data;
+    if (clientX >= 20 && !modeType) {
       this.setData({
-        modeRight: this.data.windowWidth - clientX + 96,
+        modeRight: windowWidth - clientX + 96,
       })
     } else {
       this.setData({

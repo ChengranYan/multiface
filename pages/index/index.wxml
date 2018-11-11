@@ -7,14 +7,19 @@
     <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
   </view>
   <view class='form-container'>
-      <view>
-        <input class='mail' value='你好'/>
+      <view class='form-container-item'>
+        <image class='item-icon' src='../../images/button.png'></image>
+        <input class='item-input' value='' placeholder='请填写工作邮箱'/>
+        <image class='item-icon' src='../../images/button.png'></image>
       </view>
-      <view>
-        <input class='checkcode' value='你好'/>
+      <view class='form-container-item'>
+        <image class='item-icon' src='../../images/button.png'></image>
+        <input class='item-input' value='' placeholder='请填写验证码'/>
+        <button class='item-btn'>获取验证码</button>
+      </view>
+      <view class='back'>
+        <image class='back-img' src='../../images/button.png'></image>
       </view>
   </view>
-  <view class='back'>
-    <image class='back-img' src='../../images/button.png'></image>
-  </view>
+  
 </view>

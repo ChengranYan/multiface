@@ -1,0 +1,90 @@
+/**index.wxss**/
+.discuss-container {
+  height: 100vh;
+  width: 100%;
+  background-color: #eee;
+}
+.content,.content-discuss-item{
+  background-color: #fff;
+  border-radius: 30rpx;
+  width: 90%;
+  margin: auto;
+}
+.content{
+  height: 540rpx;
+}
+.nick{
+  display: flex;
+  align-item: center; 
+  height: 80rpx;
+  padding: 30rpx 30rpx 0;
+}
+.nick image{
+  margin-right: 20rpx; 
+  width: 14%;
+  height: 100%;
+  border-radius: 50%;
+}
+nick-right{
+  width: 86%;
+  height: 100%;
+}
+.nick-right-title{
+  display: block;
+  font-size: 32rpx;
+  color: #aaa;
+}
+.nick-right-time{
+  display: block;
+  font-size: 24rpx;
+  color: #ddd;
+}
+.main-discuss{
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 30rpx;
+  line-height: 40rpx;
+}
+.discuss-img{
+  padding: 10rpx 30rpx;
+  height: 160rpx;
+  display: flex; 
+}
+.discuss-img image{
+  width: 33.3%;
+  height: 100%;
+}
+.discuss-footer{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20rpx 30rpx 0;
+  height: 80rpx; 
+}
+.discuss-footer image {
+  height: 50rpx;
+  width: 50rpx;
+}
+.discuss-footer-number{
+  height: 50rpx;
+  margin-right: 60rpx;
+  font-size: 24rpx;
+  color: #1296db;
+  line-height:50rpx;
+}
+.content-discuss-item{
+  margin: 30rpx auto;
+}
+.main-discuss-footer{
+  color: #bbb;
+  font-size: 24rpx;
+  padding: 20rpx 30rpx;
+}
+.main-discuss-footer-item{
+  color: #bbb;
+  font-size: 24rpx;
+  padding: 5rpx 0 5rpx 20rpx;
+}
+.main-discuss-footer-item strong{
+  color: #1296db;
+}

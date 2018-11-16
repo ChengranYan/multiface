@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/nickname/nickname",
-    "pages/personal/personal"
+    "pages/discuss/discuss",
+    "pages/post/post"
   ],
   "window": {
     "backgroundTextStyle": "light",

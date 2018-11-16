@@ -4,20 +4,21 @@
      <image class='title-img' src='../../images/multiFace.png'></image>
   </view>
   <view class='avatar'>
-    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/avatar1.png" mode="cover"></image>
   </view>
   <view class='form-container'>
       <view class='form-container-item'>
         <image class='item-icon' src='../../images/button.png'></image>
-        <input class='item-input' value='' placeholder='请填写工作邮箱'/>
+        <input class='item-input' bindinput='handleMailChange' value='' placeholder='请填写工作邮箱'/>
         <image class='item-icon' src='../../images/button.png'></image>
       </view>
       <view class='form-container-item'>
         <image class='item-icon' src='../../images/button.png'></image>
-        <input class='item-input' value='' placeholder='请填写验证码'/>
-        <button class='item-btn'>获取验证码</button>
+        <input class='item-input' bindinput='handleInputChange' value='{{mailCode}}' placeholder='请填写验证码'/>
+        <button class='item-btn' wx:if="{{!isGettingCode}}" bindtap='handleGetMailCode'>获取验证码</button>
+        <button class='item-btn-disable' wx:else>{{timeout}}</button>
       </view>
-      <view class='back'>
+      <view class='back' bindtap='handleRegister'>
         <image class='back-img' src='../../images/button.png'></image>
       </view>
   </view>

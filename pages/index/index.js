@@ -4,9 +4,14 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    code: '',
+    isGettingCode: false,
     userInfo: {},
     hasUserInfo: false,
+    timeout: 60,
+    timer: null,
+    mail: '',
+    mailCode: '',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -15,17 +20,100 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  handleMailChange: function(e) {
+    this.setData({
+      mail: e.detail.value
+    })
+  },
+  handleInputChange: function(e) {
+    this.setData({
+      mailCode: e.detail.value
+    })
+  },
+  handleRegister: function() {
+    let self = this;
+    console.log(self.data.code, self.data.mail, self.data.mailCode)
     wx.login({
       success(res) {
         if (res.code) {
-          console.log('login', res)
+          self.setData({
+            code: res.code
+          })
+          console.log('login code ', res.code)
           //发起网络请求
           wx.request({
             url: 'https://api.aiou.xyz/test/register',
             data: {
               code: res.code,
-              mail: 'chengran@guanghe.tv'
+              mail: self.data.mail,
+              mail_code: self.data.mailCode
+            },
+            method: 'POST',
+            success(res) {
+              wx.navigateTo({
+                url: '/pages/nickname/nickname'
+              })
+              console.log('注册接口', res.data)
+            }
+          })
+          // wx.request({
+          //   url: 'https://api.aiou.xyz/test/send_mail',
+          //   data: {
+          //     code: res.code,
+          //     mail: 'chengran@guanghe.tv'
+          //   },
+          //   method: 'POST',
+          //   success(res) {
+          //     console.log('注册接口', res.data)
+          //   }
+          // })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+    // wx.request({
+    //   url: 'https://api.aiou.xyz/test/register',
+    //   data: {
+    //     code: self.data.code,
+    //     mail: self.data.mail,
+    //     mail_code: self.data.mailCode
+    //   },
+    //   method: 'POST',
+    //   success(res) {
+    //     console.log('注册接口', res.data)
+    //   }
+    // })
+  },
+  handleGetMailCode: function(){
+    let self = this; 
+    this.setData({
+      isGettingCode: true
+    })
+    self.timer = setInterval(() => {
+      self.setData({
+        timeout: self.data.timeout - 1
+      })
+      if (self.data.timeout === 0) {
+        clearInterval(self.timer)
+        self.setData({
+          isGettingCode: false
+        })
+      }
+    }, 1000)
+    wx.login({
+      success(res) {
+        if (res.code) {
+          self.setData({
+            code: res.code
+          })
+          console.log('login code ', res.code)
+          //发起网络请求
+          wx.request({
+            url: 'https://api.aiou.xyz/test/send_mail',
+            data: {
+              code: res.code,
+              mail: self.data.mail
             },
             method: 'POST',
             success(res) {
@@ -34,6 +122,20 @@ Page({
           })
         } else {
           console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+  },
+  onLoad: function () {
+    let self = this;
+    wx.login({
+      success(res) {
+        if (res.code) {
+          self.setData({
+            code: res.code
+          })
+          console.log('login code ', res.code)
+          //发起网络请求
         }
       }
     })

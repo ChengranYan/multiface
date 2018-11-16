@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
-	"appid": "wxb537c8af841838c5",
+	"appid": "wxbc98d95347d4bfcb",
 	"projectname": "multiface",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -39,9 +39,9 @@
 			"current": 3,
 			"list": [
 				{
-					"id": -1,
-					"name": "fs",
-					"pathName": "pages/logs/logs",
+					"id": 0,
+					"name": "registedr",
+					"pathName": "pages/index/index",
 					"query": ""
 				},
 				{
@@ -58,8 +58,19 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "个人主页",
 					"pathName": "pages/personal/personal",
+=======
+					"name": "dsicuss",
+					"pathName": "pages/discuss/discuss",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "post",
+					"pathName": "pages/post/post",
+>>>>>>> 375fbb1aa7e10fdb7944f27c66a4fccb981fab09
 					"query": ""
 				}
 			]

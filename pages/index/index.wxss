@@ -57,6 +57,15 @@ page{
   border-radius: 30rpx;
   background: #4D50FA;
 }
+.item-btn-disable{
+  width: 200rpx;
+  height: 64rpx;
+  color: #fff;
+  border: none;
+  font-size: 26rpx;
+  border-radius: 30rpx;
+  background: #C1C4CA;
+}
 .back{
   width: 120rpx;
   height: 120rpx;

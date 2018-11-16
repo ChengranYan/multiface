@@ -1,4 +1,5 @@
 // pages/content/content.js
+const app = getApp()
 Page({
   data: {
     modeLeft: 10,
@@ -7,9 +8,14 @@ Page({
     data: [1, 2, 3, 4, 5, 6],
     windowWidth: wx.getSystemInfoSync().windowWidth
   },
+  handlePostMsg: function() {
+    wx.navigateTo({
+      url: '/pages/post/post'
+    })
+  },
   SwitchingAnonymousModeMove: function (e) {
     const { clientX } = e.changedTouches[0];
-    if (clientX <= 360 && this.data.modeType) {
+    if (clientX <= 250 && this.data.modeType) {
       this.setData({
         modeLeft: clientX + 96,
        })
@@ -30,7 +36,7 @@ Page({
   SwitchingRealNameModeMove: function (e) {
     const {clientX} = e.changedTouches[0];
     const {modeType, windowWidth} = this.data;
-    if (clientX >= 20 && !modeType) {
+    if (clientX >= 120 && !modeType) {
       this.setData({
         modeRight: windowWidth - clientX + 96,
       })
@@ -48,7 +54,11 @@ Page({
       })
     }
   },
-
+  handleComment: function() {
+    wx.navigateTo({
+      url: '/pages/discuss/discuss'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

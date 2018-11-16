@@ -7,4 +7,8 @@
 </text>
 <image  class="avatar" src="../../images/avatar.png" mode="cover"></image>
 
-<input class='nickname' value='你好'/>
+<input class='nickname' bindinput='handleInputChange' value='{{nickname}}' placeholder='请填写匿名名称'/>
+
+<view class='back' bindtap='handleNickName'>
+  <image class='back-img' src='../../images/button.png'></image>
+</view>

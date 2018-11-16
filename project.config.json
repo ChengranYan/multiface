@@ -36,11 +36,11 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
-					"name": "fs",
+					"name": "registedr",
 					"pathName": "pages/index/index",
 					"query": ""
 				},
@@ -54,6 +54,18 @@
 					"id": -1,
 					"name": "content",
 					"pathName": "pages/content/content",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dsicuss",
+					"pathName": "pages/discuss/discuss",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "post",
+					"pathName": "pages/post/post",
 					"query": ""
 				}
 			]

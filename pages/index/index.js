@@ -50,6 +50,9 @@ Page({
             },
             method: 'POST',
             success(res) {
+              wx.navigateTo({
+                url: '/pages/nickname/nickname'
+              })
               console.log('注册接口', res.data)
             }
           })
@@ -110,7 +113,7 @@ Page({
             url: 'https://api.aiou.xyz/test/send_mail',
             data: {
               code: res.code,
-              mail: 'chengran@guanghe.tv'
+              mail: self.data.mail
             },
             method: 'POST',
             success(res) {

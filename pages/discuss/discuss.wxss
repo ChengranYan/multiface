@@ -1,21 +1,26 @@
 /**index.wxss**/
-.discuss-container {
-  height: 100vh;
-  width: 100%;
+page{
   background-color: #eee;
 }
-.content,.content-discuss-item{
+.discuss-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content{
   background-color: #fff;
   border-radius: 30rpx;
   width: 90%;
+  height: 580rpx;
   margin: auto;
 }
-.content{
-  height: 540rpx;
+.content-discuss-item{
+  flex: 1;
 }
 .nick{
   display: flex;
-  align-item: center; 
+  align-items: center; 
   height: 80rpx;
   padding: 30rpx 30rpx 0;
 }

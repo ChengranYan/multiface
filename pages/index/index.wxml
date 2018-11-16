@@ -4,7 +4,7 @@
      <image class='title-img' src='../../images/multiFace.png'></image>
   </view>
   <view class='avatar'>
-    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/avatar1.png" mode="cover"></image>
   </view>
   <view class='form-container'>
       <view class='form-container-item'>

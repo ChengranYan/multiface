@@ -23,24 +23,46 @@
       <image src="../../static/img/msg.svg" class="discuss-footer-zan"/>
     </view>
   </view>
-  <view class='content-discuss-item'>
-    <view class="nick">
-      <image src="https://img.meituan.net/avatar/1b8af434a3779c6ce01a1af50341cbc391181.jpg@100w_100h_1e_1c" />
-      <view class="nick-right">
-        <text class="nick-right-title">吃鸡小分队</text>
-        <text class="nick-right-time">36分钟前</text>
+  <scroll-view class='comment-area'>
+    <view class='content-discuss-item'>
+      <view class="nick">
+        <image src="https://img.meituan.net/avatar/1b8af434a3779c6ce01a1af50341cbc391181.jpg@100w_100h_1e_1c" />
+        <view class="nick-right">
+          <text class="nick-right-title">吃鸡小分队</text>
+          <text class="nick-right-time">36分钟前</text>
+        </view>
+      </view>
+      <text class="main-discuss">
+        hahah，我最爱的是干瘪豆角，还有糖醋小排，不喜欢红烧茄子好吃，不知道好不好。。。
+      </text>
+      <view class="main-discuss-footer">
+        <view class="main-discuss-footer-item">
+          <strong>章鱼小丸子:</strong>好的吧，hhhhhh。。。
+        </view>
+        <view class="main-discuss-footer-item">
+          <strong>小辣椒：</strong>赞同赞同赞同赞同！！！！
+        </view>
       </view>
     </view>
-    <text class="main-discuss">
-      hahah，我最爱的是干瘪豆角，还有糖醋小排，不喜欢红烧茄子好吃，不知道好不好。。。
-    </text>
-    <view class="main-discuss-footer">
-      <view class="main-discuss-footer-item">
-        <strong>章鱼小丸子:</strong>好的吧，hhhhhh。。。
+    <view class='content-discuss-item'>
+      <view class="nick">
+        <image src="https://img.meituan.net/avatar/1b8af434a3779c6ce01a1af50341cbc391181.jpg@100w_100h_1e_1c" />
+        <view class="nick-right">
+          <text class="nick-right-title">吃鸡小分队</text>
+          <text class="nick-right-time">36分钟前</text>
+        </view>
       </view>
-      <view class="main-discuss-footer-item">
-        <strong>小辣椒：</strong>赞同赞同赞同赞同！！！！
+      <text class="main-discuss">
+        hahah，我最爱的是干瘪豆角，还有糖醋小排，不喜欢红烧茄子好吃，不知道好不好。。。
+      </text>
+      <view class="main-discuss-footer">
+        <view class="main-discuss-footer-item">
+          <strong>章鱼小丸子:</strong>好的吧，hhhhhh。。。
+        </view>
+        <view class="main-discuss-footer-item">
+          <strong>小辣椒：</strong>赞同赞同赞同赞同！！！！
+        </view>
       </view>
     </view>
-  </view>
+  </scroll-view>
 </view>

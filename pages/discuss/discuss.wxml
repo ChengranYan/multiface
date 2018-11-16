@@ -1,0 +1,46 @@
+<view class="discuss-container">
+  <view class='content'>
+    <view class="nick">
+      <image src="http://storage.360buyimg.com/i.imageUpload/6c697571783035313831343636303031333032363938_sma.jpg" />
+      <view class="nick-right">
+        <text class="nick-right-title">章鱼小丸子</text>
+        <text class="nick-right-time">1小时前</text>
+      </view>
+    </view>
+    <text class="main-discuss">
+      今天中午的饭菜很好吃，红烧茄子好吃，最棒的是可乐鸡翅，哈哈哈哈哈哈。。。fjhjfjbvjfbvfkbdkbfkjbvkjdfbvkf。。。
+    </text>
+    <view class="discuss-img">
+      <image src="http://p0.meituan.net/shaitu/57c5d576f1ade633b4630a01af4c583c1669451.jpg"></image>
+      <image src="http://p0.meituan.net/shaitu/a92c0fabff734ef258a32c710aa599691912571.jpg"></image>
+      <image src="http://p0.meituan.net/shaitu/61b761db96fe569bcf66f6812cd849422019379.jpg"></image>
+    </view>
+    <view class="discuss-footer">
+      <image src="../../static/img/zan.svg" class="discuss-footer-msg" />
+      <view class="discuss-footer-number">
+        12条评论
+      </view>
+      <image src="../../static/img/msg.svg" class="discuss-footer-zan"/>
+    </view>
+  </view>
+  <view class='content-discuss-item'>
+    <view class="nick">
+      <image src="https://img.meituan.net/avatar/1b8af434a3779c6ce01a1af50341cbc391181.jpg@100w_100h_1e_1c" />
+      <view class="nick-right">
+        <text class="nick-right-title">吃鸡小分队</text>
+        <text class="nick-right-time">36分钟前</text>
+      </view>
+    </view>
+    <text class="main-discuss">
+      hahah，我最爱的是干瘪豆角，还有糖醋小排，不喜欢红烧茄子好吃，不知道好不好。。。
+    </text>
+    <view class="main-discuss-footer">
+      <view class="main-discuss-footer-item">
+        <strong>章鱼小丸子:</strong>好的吧，hhhhhh。。。
+      </view>
+      <view class="main-discuss-footer-item">
+        <strong>小辣椒：</strong>赞同赞同赞同赞同！！！！
+      </view>
+    </view>
+  </view>
+</view>

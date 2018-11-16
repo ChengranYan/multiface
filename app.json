@@ -3,7 +3,9 @@
     "pages/content/content",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/nickname/nickname"
+    "pages/nickname/nickname",
+    "pages/content/content",
+    "pages/discuss/discuss"
   ],
   "window": {
     "backgroundTextStyle": "light",

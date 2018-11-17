@@ -17,7 +17,7 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -32,11 +32,10 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -58,10 +57,6 @@
 				},
 				{
 					"id": -1,
-<<<<<<< HEAD
-					"name": "个人主页",
-					"pathName": "pages/personal/personal",
-=======
 					"name": "dsicuss",
 					"pathName": "pages/discuss/discuss",
 					"query": ""
@@ -70,7 +65,12 @@
 					"id": -1,
 					"name": "post",
 					"pathName": "pages/post/post",
->>>>>>> 375fbb1aa7e10fdb7944f27c66a4fccb981fab09
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
 					"query": ""
 				}
 			]

@@ -15,11 +15,7 @@ Page({
   },
   SwitchingAnonymousModeMove: function (e) {
     const { clientX } = e.changedTouches[0];
-<<<<<<< HEAD
     if (clientX <= 360 && this.data.modeType) {
-=======
-    if (clientX <= 250 && this.data.modeType) {
->>>>>>> 375fbb1aa7e10fdb7944f27c66a4fccb981fab09
       this.setData({
         modeLeft: clientX + 96,
        })
@@ -41,11 +37,7 @@ Page({
   SwitchingRealNameModeMove: function (e) {
     const {clientX} = e.changedTouches[0];
     const {modeType, windowWidth} = this.data;
-<<<<<<< HEAD
     if (clientX >= 20 && !modeType) {
-=======
-    if (clientX >= 120 && !modeType) {
->>>>>>> 375fbb1aa7e10fdb7944f27c66a4fccb981fab09
       this.setData({
         modeRight: windowWidth - clientX + 96,
       })

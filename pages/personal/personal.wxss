@@ -1,0 +1,197 @@
+/* pages/personal/personal.wxss */
+page {
+  background-color: #f5f5f5;
+}
+.personal-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.personal-wrapper .personal-header {
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.personal-wrapper .personal-header .header-container {
+  height: 136rpx;
+  border-radius: 72rpx;
+  background:linear-gradient(to left, #4D50FA 0%,#6A8DFE 100%);
+}
+.personal-main {
+  padding: 0 40rpx 0 40rpx;
+  box-sizing: border-box;
+}
+.personal-main .personal-info-bar {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+.personal-main .personal-info-bar .avatar {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 0 auto;
+  padding-top: 36rpx;
+}
+
+.personal-main .personal-info-bar .avatar .avatar-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.personal-main .personal-info-bar .signature {
+  text-align: center;
+  padding-top: 31rpx;
+  font-size: 26rpx;
+  display: block;
+  color: #4A4A4A;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; 
+}
+
+.personal-main .personal-info-bar .nickname {
+  text-align: center;
+  padding-top: 25rpx;
+  font-size: 32rpx;
+  display: block;
+  color: #4A4A4A;
+}
+
+.personal-main .personal-info-bar .nav-bar{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-top: 1rpx solid #EEEEF2;
+  margin-top: 20.5rpx;
+}
+
+.personal-main .personal-info-bar .nav-bar .nav-bar-slider .slider-text {
+  font-size: 26rpx;
+  color: #72747D;
+  padding-bottom: 13rpx;
+}
+.personal-main .personal-info-bar .nav-bar .nav-bar-slider .slider-text.active {
+  color: #4D50FA;
+  border-bottom: 2px solid #4D50FA;
+}
+
+.personal-main .personal-talk-list, .personal-interactive-list, .personal-privatemsg-list {
+  width: 100%;
+}
+.personal-main .personal-talk-list, .talk-box {
+  padding: 40rpx;
+  margin-top: 38rpx;
+  margin-bottom: 38rpx;
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+  border-radius: 16rpx;
+  display: none;
+}
+
+.personal-interactive-list .interactive-box {
+  padding: 40rpx;
+  margin-top: 38rpx;
+  margin-bottom: 38rpx;
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+  border-radius: 16rpx;
+  display: none;
+}
+.personal-privatemsg-list .private-msg-box {
+  padding: 40rpx;
+  margin-top: 38rpx;
+  margin-bottom: 38rpx;
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+  border-radius: 16rpx;
+}
+
+.personal-main .personal-talk-list .talk-box, .interactive-box, .private-msg-box .box-top {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.personal-main .personal-talk-list .talk-box, .interactive-box, .private-msg-box .box-top .box-avatar {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.personal-main .personal-talk-list .talk-box, .interactive-box, .private-msg-box .box-top .box-avatar .avatar-icon {
+  width: 100%;
+  height: 100%;
+}
+.box-nickname {
+  margin-left: 16rpx;
+}
+.box-nickname .nickname {
+  display: block;
+  color: #72747D;
+  font-size: 32rpx;
+}
+
+.box-nickname .time {
+  display: block;
+  color: #C1C4CA;
+  font-size: 26rpx;
+  padding-top: 6rpx;
+  box-sizing: border-box;
+}
+.box-talk-text {
+  padding-top: 33rpx;
+}
+
+.box-talk-text .text-desc {
+  font-size: 32rpx;
+  color: #3B3A42;
+}
+.box-discuss {
+  padding-top: 32rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+.comment {
+  width: 240rpx;
+}
+
+.comment-word, .awesome-word {
+  font-size: 26rpx;
+  color: #72747D;
+}
+
+.awesome-word {
+  color: #4D50FA;
+}
+.interactive-box .box-talk-text {
+  padding-bottom: 32rpx;
+}
+.interactive-bottom {
+  padding-top: 32rpx;
+  border-top: 1px solid #EEEEF2;
+}
+
+.interactive-bottom .interactive-nickname {
+  display: block;
+  color: #72747D;
+  font-size: 30rpx;
+}
+
+.interactive-word {
+  display: block;
+  font-size: 26rpx;
+  padding-top: 36rpx;
+}
+
+
+
+
+

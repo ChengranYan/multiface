@@ -28,7 +28,7 @@
   >
     <view class='article-info'>
       <view class='article-info-left'>
-        <image class='avatar-info-img' src='{{item.avatar}}'></image>
+        <image class='avatar-info-img' src="{{item.status ? item.avatar : '../../images/anonymous.png'}}"></image>
       </view>
       <view class='article-info-right'>
         <view class='info-name' style="color:{{modeType ? '#72747D':'#fff'}}">
@@ -40,7 +40,7 @@
     <view class='article-content'>
       <text class='article-text' style="color:{{modeType ? '#3B3A42':'#fff'}}">{{item.content}}</text>
       <view class='article-img-con' wx:if="{{item.picture.length !== 0}}">
-        <image class='article-img' wx:for='{{item.picture}}' wx:key="{{index}}" wx:for-item="imgs" src='{{imgs}}'></image>
+        <image class='article-img'  wx:for='{{item.picture}}' wx:key="{{index}}" wx:for-item="imgs" src='{{imgs}}'></image>
       </view>
     </view>
     <view class='article-btn-container'>

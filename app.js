@@ -22,9 +22,9 @@ App({
             if (res.data.status === 'success') {
               console.log('是否注册', res.data)
               self.globalData.info = res.data
-              wx.navigateTo({
-                url: '/pages/content/content'
-              })
+              // wx.redirectTo({
+              //   url: '/pages/content/content'
+              // })
             }
           }
         })

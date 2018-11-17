@@ -2,6 +2,7 @@
   "pages": [
     "pages/content/content",
     "pages/index/index",
+    "pages/personal/personal",
     "pages/logs/logs",
     "pages/nickname/nickname",
     "pages/discuss/discuss",

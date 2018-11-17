@@ -45,8 +45,9 @@
     </view>
     <view class='article-btn-container'>
       <image class='article-btn-icon' bindtap='handleComment' src='../../images/ic_comment.png'></image>
-      <text class='article-btn-text' style="color:{{modeType ? '#72747D':'#fff'}}">999+评论</text>
+      <text class='article-btn-text' style="color:{{modeType ? '#72747D':'#fff'}}">{{item.comment_cnt}}评论</text>
       <image class='article-btn-icon' src='../../images/button.png'></image>
+      <text class='article-btn-text' style="color:{{modeType ? '#72747D':'#fff'}}">{{item.praise_cnt}}点赞</text>
     </view>
   </view>
 </scroll-view>

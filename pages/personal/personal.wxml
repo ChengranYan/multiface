@@ -2,7 +2,25 @@
 <view class='personal-wrapper'>
   <view class='personal-header'>
     <view class='header-container'>
-      <text>向右滑动</text>
+      <view class='changemode'>
+        <view
+          class='changemode-icon-con changemode-icon-left '
+          catch:touchmove='SwitchingAnonymousModeMove'
+          catch:touchend='SwitchingAnonymousModeEnd'
+          style='left:{{modeLeft}}rpx'
+        >
+          <image class='changemode-icon' src="{{modeType ? '../../images/avatar.png':'../../images/anonymous.png'}}"></image>
+        </view>
+  <text class='changemode-text'>{{modeType ? '向右滑动切换为匿名模式':'向左滑动切换为实名模式'}}</text>
+  <view
+    class='changemode-icon-con changemode-icon-right'
+    catch:touchmove='SwitchingRealNameModeMove'
+    catch:touchend='SwitchingRealNameModeEnd'
+    style='right:{{modeRight}}rpx'
+  >
+    <image class='changemode-icon' src="{{modeType ? '../../images/anonymous.png':'../../images/avatar.png'}}"></image>
+  </view>
+</view>
     </view>
   </view>
   <view class="personal-main">

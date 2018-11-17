@@ -84,7 +84,7 @@ Page({
   fetchPages: function() {
     let self = this;
     wx.request({
-      url: 'https://api.aiou.xyz/prest4mface/_QUERIES/mface/getallcard',
+      url: 'https://api.aiou.xyz/prest4mface/_QUERIES/mface/getallcard?page_size=5&page=1',
       method: 'GET',
       success(res) {
         // wx.navigateTo({

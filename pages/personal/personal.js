@@ -7,7 +7,49 @@ Page({
   data: {
     talkList: [1,2,3,4,5,6]
   },
-
+  SwitchingAnonymousModeMove: function (e) {
+    const { clientX } = e.changedTouches[0];
+    if (clientX <= 360 && this.data.modeType) {
+      this.setData({
+        modeLeft: clientX + 96,
+      })
+    } else {
+      this.setData({
+        modeType: false,
+        modeLeft: 10,
+      })
+      app.globalData.modeType = false
+    }
+  },
+  SwitchingAnonymousModeEnd: function () {
+    if (this.data.modeType) {
+      this.setData({
+        modeLeft: 10
+      })
+    }
+  },
+  SwitchingRealNameModeMove: function (e) {
+    const { clientX } = e.changedTouches[0];
+    const { modeType, windowWidth } = this.data;
+    if (clientX >= 20 && !modeType) {
+      this.setData({
+        modeRight: windowWidth - clientX + 96,
+      })
+    } else {
+      this.setData({
+        modeType: true,
+        modeRight: 10
+      })
+      app.globalData.modeType = true
+    }
+  },
+  SwitchingRealNameModeEnd: function () {
+    if (!this.data.modeType) {
+      this.setData({
+        modeRight: 10
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

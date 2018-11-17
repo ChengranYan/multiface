@@ -4,22 +4,23 @@
      <image class='title-img' src='../../images/multiFace.png'></image>
   </view>
   <view class='avatar'>
-    <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/avatar1.png" mode="cover"></image>
+    <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
   </view>
   <view class='form-container'>
       <view class='form-container-item'>
-        <image class='item-icon' src='../../images/button.png'></image>
+        <image class='item-icon' src='../../images/mail.png'></image>
         <input class='item-input' bindinput='handleMailChange' value='' placeholder='请填写工作邮箱'/>
-        <image class='item-icon' src='../../images/button.png'></image>
+        <image class='item-icon' src='../../images/correct.png'></image>
       </view>
       <view class='form-container-item'>
-        <image class='item-icon' src='../../images/button.png'></image>
+        <image class='item-icon' src='../../images/ic_number.png'></image>
         <input class='item-input' bindinput='handleInputChange' value='{{mailCode}}' placeholder='请填写验证码'/>
         <button class='item-btn' wx:if="{{!isGettingCode}}" bindtap='handleGetMailCode'>获取验证码</button>
         <button class='item-btn-disable' wx:else>{{timeout}}</button>
       </view>
       <view class='back' bindtap='handleRegister'>
-        <image class='back-img' src='../../images/button.png'></image>
+        <image class='back-img' wx:if="{{mailCode !== ''}}" src='../../images/button-able.png'></image>
+        <image class='back-img' wx:else src='../../images/button.png'></image>
       </view>
   </view>
   

@@ -117,7 +117,14 @@ Page({
             },
             method: 'POST',
             success(res) {
+              wx.showToast({
+                title: '验证码已发送邮箱',
+                icon: 'none',
+                duration: 3000
+              })
+              app.globalData.mail = self.data.mail
               console.log('注册接口',res.data)
+              console.log(app.globalData)
             }
           })
         } else {

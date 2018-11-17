@@ -7,7 +7,7 @@ Page({
     modeLeft: 10,
     modeRight: 10,
     postImgPath: ['plus'],
-    modeType: true, //此时为实名模式
+    modeType: app.globalData.modeType, //此时为实名模式
     data: [1, 2, 3, 4, 5, 6],
     windowWidth: wx.getSystemInfoSync().windowWidth
   },
@@ -51,14 +51,14 @@ Page({
         url: 'https://api.aiou.xyz/prest4mface/mface/public/t_card',
         method: 'POST',
         data: {
-          mail: 'sunyong@guanghe.tv',  //用户邮箱
-          status: true,  //用户状态，true为正常状态，false为隐身（猥琐）状态
-          content: 'hahaha',  //帖子内容
+          mail: app.globalData.info.mail,  //用户邮箱
+          status: app.globalData.modeType,  //用户状态，true为正常状态，false为隐身（猥琐）状态
+          content: self.data.postMsg,  //帖子内容
           picture: data  //帖子配图，为数组类型，每个元素为图片的base64字符串
         },
         success: res => { 
           console.log(res.data)
-          wx.navigateTo({
+          wx.redirectTo({
             url: '/pages/content/content'
           })
         }
@@ -108,6 +108,7 @@ Page({
         modeType: false,
         modeLeft: 10,
       })
+      app.globalData.modeType = false
     }
   },
   SwitchingAnonymousModeEnd: function () {
@@ -129,6 +130,8 @@ Page({
         modeType: true,
         modeRight: 10
       })
+      app.globalData.modeType = true
+      console.log(app.globalData)
     }
   },
   SwitchingRealNameModeEnd: function () {
@@ -147,6 +150,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(app.globalData);    
   },
 
   /**
@@ -160,7 +164,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      modeType: app.globalData.modeType
+    })
   },
 
   /**

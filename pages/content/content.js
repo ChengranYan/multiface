@@ -4,8 +4,8 @@ Page({
   data: {
     modeLeft: 10,
     modeRight: 10,
-    modeType: true, //此时为实名模式
-    data: [1, 2, 3, 4, 5, 6],
+    modeType: app.globalData.modeType, //此时为实名模式
+    data: [],
     windowWidth: wx.getSystemInfoSync().windowWidth
   },
   handlePostMsg: function() {
@@ -24,6 +24,7 @@ Page({
         modeType: false,
         modeLeft: 10,
       })
+      app.globalData.modeType = false
     }
   },
   SwitchingAnonymousModeEnd: function () {
@@ -45,6 +46,7 @@ Page({
         modeType: true,
         modeRight: 10
       })
+      app.globalData.modeType = true
     }
   },
   SwitchingRealNameModeEnd: function () {
@@ -59,24 +61,53 @@ Page({
       url: '/pages/discuss/discuss'
     })
   },
+  parseTime(tiem) {
+    return new Date(tiem).toLocaleDateString()
+  },
+  getAvatar() {
+    let i = Math.floor(Math.random() * 10);
+    return `http://api.aiou.xyz/pictures/${i}.jpg`
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.fetchPages()
+    console.log(this.parseTime("2018-11-12T08:53:36.349097"))
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
-
+  fetchPages: function() {
+    let self = this;
+    wx.request({
+      url: 'https://api.aiou.xyz/prest4mface/_QUERIES/mface/getallcard',
+      method: 'GET',
+      success(res) {
+        // wx.navigateTo({
+        //   url: '/pages/nickname/nickname'
+        // })
+        let data = res.data.map((item) => {
+          item.create_time = self.parseTime(item.create_time)
+          item.avatar = self.getAvatar()
+        })
+        console.log('首页接口', res.data)
+        self.setData({
+          data: res.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      modeType: app.globalData.modeType
+    })
   },
 
   /**

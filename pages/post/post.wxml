@@ -7,7 +7,7 @@
       catch:touchend='SwitchingAnonymousModeEnd'
       style='left:{{modeLeft}}rpx'
     >
-      <image class='changemode-icon' src="{{modeType ? '../../images/avatar.png':'../../images/avatar1.png'}}"></image>
+      <image class='changemode-icon' src="{{modeType ? '../../images/avatar.png':'../../images/anonymous.png'}}"></image>
     </view>
     <text class='changemode-text'>{{modeType ? '向右滑动切换为匿名模式':'向左滑动切换为实名模式'}}</text>
     <view
@@ -16,10 +16,10 @@
       catch:touchend='SwitchingRealNameModeEnd'
       style='right:{{modeRight}}rpx'
     >
-      <image class='changemode-icon' src="{{modeType ? '../../images/avatar1.png':'../../images/avatar.png'}}"></image>
+      <image class='changemode-icon' src="{{modeType ? '../../images/anonymous.png':'../../images/avatar.png'}}"></image>
     </view>
   </view>
-  <view class='post-msg-area'>
+  <view class='post-msg-area' style="background:{{modeType ? '#fff':'#2F3676'}}">
     <input class='msg-input' bindinput='handlePostChange' value='' placeholder='请输入你想发布的内容...'/>
     <view class='imgs-container'>
       <view wx:for="{{postImgPath}}" wx:key="{{index}}" class='post-img-container'>
